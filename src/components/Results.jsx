@@ -8,7 +8,9 @@ import {Loading}  from './Loading';
 export const Results = () => {
   const { results,  loading, getResults, searchTerm } = useStateContext();
   const location = useLocation();
-
+  if (location === "no") {
+    
+  }
   useEffect(() => {
     if (searchTerm !== '') {
       if (location.pathname === '/videos') {
